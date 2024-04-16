@@ -10,7 +10,11 @@ def index():
 
 @app.route('/greet')
 def index():
-    return "<h1> Hello <h1>"    
+    return "<h1> Hello <h1>"   
+
+@app.route('/greet/<name>')
+def index(name):
+    return "<h1> Hello {}<h1>".format(name)     
 
 
 if __name__=='__main__':
